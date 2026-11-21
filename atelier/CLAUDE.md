@@ -1,0 +1,1 @@
+/workspaces/atelier-fashion/atelier/AGENTS.md
