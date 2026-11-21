@@ -1,0 +1,1 @@
+document.querySelector('form')?.addEventListener('submit',e=>e.preventDefault());document.querySelector('form button')?.addEventListener('click',()=>{const input=document.querySelector('input');if(input?.value)alert('Preview only — newsletter signup is not connected yet.');else input?.focus();});

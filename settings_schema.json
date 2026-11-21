@@ -1,0 +1,5 @@
+[
+ {"name":"theme_info","theme_name":"Atelier","theme_version":"0.1.0","theme_author":"Atelier","theme_documentation_url":"","theme_support_url":""},
+ {"name":"Brand","settings":[{"type":"text","id":"logo_text","label":"Text logo","default":"ATELIER."}]},
+ {"name":"Colors","settings":[{"type":"color","id":"color_background","label":"Background","default":"#f4f1eb"},{"type":"color","id":"color_text","label":"Text","default":"#20201d"}]}
+]

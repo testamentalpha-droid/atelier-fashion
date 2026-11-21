@@ -1,0 +1,8 @@
+<header class="site-header">
+  <a class="site-header__logo" href="{{ routes.root_url }}">{{ settings.logo_text | default: shop.name | escape }}</a>
+  <nav aria-label="Main navigation"><ul>{% for link in section.settings.menu.links %}<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>{% endfor %}</ul></nav>
+  <a href="{{ routes.cart_url }}">Bag ({{ cart.item_count }})</a>
+</header>
+{% schema %}
+{"name":"Header","settings":[{"type":"link_list","id":"menu","label":"Menu","default":"main-menu"}]}
+{% endschema %}
