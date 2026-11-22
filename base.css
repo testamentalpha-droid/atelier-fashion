@@ -60,3 +60,62 @@
     padding: 5rem 7%;
   }
 }
+
+/* ATELIER — FABRIC REVEAL EFFECT */
+
+.hero-section {
+  isolation: isolate;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      110deg,
+      #171613 5%,
+      rgba(23,22,19,.88) 35%,
+      transparent 85%
+    );
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -30%;
+  left: -60%;
+  width: 45%;
+  height: 160%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(244,241,235,.22),
+    rgba(244,241,235,.55),
+    transparent
+  );
+  transform: skewX(-18deg);
+  animation: atelier-fabric 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes atelier-fabric {
+  0% {
+    left: -60%;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  75% {
+    left: 120%;
+    opacity: 1;
+  }
+  100% {
+    left: 120%;
+    opacity: 0;
+  }
+}
