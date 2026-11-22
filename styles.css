@@ -125,3 +125,71 @@ footer small {
   padding: 0;
   font-weight: 400;
 }
+
+/* ATELIER V0.3 — HERO REVEAL */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-image {
+  position: relative;
+  overflow: hidden;
+  animation: atelier-image-reveal 1.5s ease both;
+}
+
+.hero-copy {
+  animation: atelier-text-reveal 1.2s ease both;
+}
+
+.hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(255,255,255,.45) 50%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  animation: atelier-silk 3s ease-in-out 1s infinite;
+  pointer-events: none;
+}
+
+@keyframes atelier-image-reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes atelier-text-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes atelier-silk {
+  to {
+    transform: translateX(120%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image,
+  .hero-copy,
+  .hero-image::after {
+    animation: none;
+  }
+}
+
